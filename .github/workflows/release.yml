@@ -26,8 +26,39 @@ jobs:
 
       # some parsers need tree-sitter, see `parsers.json`'s `requires_generate_from_grammar`
       - name: Install dependencies
+        if: runner.os != 'Windows'
         run: |
-          npm install tree-sitter
+          npm install tree-sitter-cli
+          echo "$PWD/node_modules/.bin" >> $GITHUB_PATH
+
+      - name: Install dependencies
+        if: runner.os == 'Windows'
+        run: |
+          npm install tree-sitter-cli
+          echo "$pwd\node_modules\.bin" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
+
+      - name: Debug tree-sitter
+        if: runner.os == 'Windows'
+        run: |
+          Write-Host "Current PATH is:"
+          $env:Path
+          Write-Host "`nLooking for tree-sitter:"
+          Get-Command tree-sitter -ErrorAction SilentlyContinue | Select-Object Source
+          if (-not $?) { Write-Host "tree-sitter command not found" }
+          Write-Host "`nCurrent directory:"
+          Get-Location
+          Write-Host "`nContents of node_modules\.bin:"
+          if (Test-Path "node_modules\.bin") {
+            Get-ChildItem "node_modules\.bin"
+          } else {
+            Write-Host "Directory not found"
+          }
+          Write-Host "`nTrying to run tree-sitter:"
+          try {
+            tree-sitter --version
+          } catch {
+            Write-Host "Failed to run tree-sitter: $_"
+          }
 
       - uses: actions/setup-python@v5
         with:
@@ -39,13 +70,18 @@ jobs:
         with:
           platforms: all
 
+      - name: Prebuild fetch repos and build tree-sitter grammars
+        run: |
+          python -m pip install .
+          python build.py --prebuild
+
       - name: Install cibuildwheel
         run: python -m pip install cibuildwheel==2.16.2
 
       - name: Build wheels
         run: python -m cibuildwheel --output-dir dist
         env:
-          CIBW_BEFORE_BUILD: pip install cython==3.0.8 && pip install -e . && python build.py
+          CIBW_BEFORE_BUILD: pip install cython==3.0.8 && pip install . && python build.py
           CIBW_TEST_REQUIRES: pytest
           CIBW_TEST_COMMAND: pytest --showlocals {package}/tests
           CIBW_SKIP: "{cp36**,pp*}"

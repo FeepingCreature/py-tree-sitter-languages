@@ -2,6 +2,7 @@ import json
 import os
 import subprocess
 import sys
+from argparse import ArgumentParser
 from tree_sitter import Language
 
 with open("parsers.json") as f:
@@ -54,9 +55,16 @@ else:
         subprocess.check_call(["git", "fetch", "--depth=1", "origin", commit], cwd=clone_directory)
         subprocess.check_call(["git", "checkout", commit], cwd=clone_directory)
         if vendor:
-            subprocess.check_call(["tree-sitter", "generate"], cwd=vendor)
+            subprocess.check_call("tree-sitter generate", cwd=vendor, shell=True)
 
 print()
+
+parser = ArgumentParser()
+parser.add_argument("--prebuild", action="store_true", help="Only clone repos and generate grammar")
+args = parser.parse_args()
+
+if args.prebuild:
+    exit(0)
 
 if sys.platform == "win32":
     languages_filename = "tree_sitter_languages_freed_wu_pr\\languages.dll"
