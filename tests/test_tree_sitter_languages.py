@@ -9,12 +9,10 @@ LANGUAGES = [
     'css',
     'dockerfile',
     'dot',
-    'elisp',
     'elixir',
     'elm',
     'embedded_template',  # embedded-template
     'erlang',
-    'fixed_form_fortran',
     'fortran',
     'go',
     'gomod',  # go-mod
@@ -44,9 +42,7 @@ LANGUAGES = [
     'rust',
     'scala',
     'sql',
-    'sqlite',
     'toml',
-    'tsq',
     'typescript',
     'yaml',
 ]
