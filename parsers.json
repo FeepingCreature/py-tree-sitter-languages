@@ -1377,18 +1377,6 @@
       "@theHamsta"
     ]
   },
-  "just": {
-    "install_info": {
-      "files": [
-        "src/parser.c",
-        "src/scanner.c"
-      ],
-      "url": "https://github.com/IndianBoy42/tree-sitter-just"
-    },
-    "maintainers": [
-      "@Hubro"
-    ]
-  },
   "kconfig": {
     "install_info": {
       "files": [
