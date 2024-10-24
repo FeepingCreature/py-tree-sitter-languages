@@ -1780,21 +1780,6 @@
       "@leo60228"
     ]
   },
-  "norg": {
-    "install_info": {
-      "cxx_standard": "c++14",
-      "files": [
-        "src/parser.c",
-        "src/scanner.cc"
-      ],
-      "url": "https://github.com/nvim-neorg/tree-sitter-norg",
-      "use_makefile": true
-    },
-    "maintainers": [
-      "@JoeyGrajciar",
-      "@vhyrro"
-    ]
-  },
   "nqc": {
     "install_info": {
       "files": [
