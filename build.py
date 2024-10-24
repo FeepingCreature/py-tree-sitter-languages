@@ -10,6 +10,11 @@ with open("parsers.json") as f:
 with open("lockfile.json") as f:
     lockfile = json.load(f)
 
+parser = ArgumentParser()
+parser.add_argument("--prebuild", action="store_true", help="Only clone repos and generate grammar")
+parser.add_argument("--legacy", action="store_true", help="Only build legacy languages that were in 1.10.2.")
+args = parser.parse_args()
+
 repos = []
 vendors = []
 # https://github.com/tree-sitter/py-tree-sitter/issues/189
@@ -30,6 +35,9 @@ for lang, data in parsers.items():
     clone_directory = os.path.join("vendor", url.rstrip("/").split("/")[-1])
     requires_generate_from_grammar = data["install_info"].get("requires_generate_from_grammar", False)
     location = data["install_info"].get("location")
+    legacy = data.get("legacy", False)
+    if args.legacy and not legacy:
+        continue
     vendor = clone_directory + "/" + location if location else clone_directory
     repos.append((url, commit, clone_directory, vendor if requires_generate_from_grammar else None))
     vendors.append(vendor)
@@ -58,10 +66,6 @@ else:
             subprocess.check_call("tree-sitter generate", cwd=vendor, shell=True)
 
 print()
-
-parser = ArgumentParser()
-parser.add_argument("--prebuild", action="store_true", help="Only clone repos and generate grammar")
-args = parser.parse_args()
 
 if args.prebuild:
     exit(0)

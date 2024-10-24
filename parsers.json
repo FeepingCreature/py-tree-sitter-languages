@@ -104,6 +104,7 @@
     }
   },
   "bash": {
+    "legacy": true,
     "filetype": "sh",
     "install_info": {
       "files": [
@@ -189,6 +190,7 @@
     ]
   },
   "c": {
+    "legacy": true,
     "install_info": {
       "files": [
         "src/parser.c"
@@ -200,6 +202,7 @@
     ]
   },
   "c_sharp": {
+    "legacy": true,
     "filetype": "cs",
     "install_info": {
       "files": [
@@ -282,6 +285,7 @@
     ]
   },
   "commonlisp": {
+    "legacy": true,
     "filetype": "lisp",
     "install_info": {
       "files": [
@@ -329,6 +333,7 @@
     ]
   },
   "cpp": {
+    "legacy": true,
     "install_info": {
       "files": [
         "src/parser.c",
@@ -475,6 +480,7 @@
     ]
   },
   "dockerfile": {
+    "legacy": true,
     "install_info": {
       "files": [
         "src/parser.c"
@@ -486,6 +492,7 @@
     ]
   },
   "dot": {
+    "legacy": true,
     "install_info": {
       "files": [
         "src/parser.c"
@@ -570,6 +577,7 @@
     ]
   },
   "elixir": {
+    "legacy": true,
     "install_info": {
       "files": [
         "src/parser.c",
@@ -582,6 +590,7 @@
     ]
   },
   "elm": {
+    "legacy": true,
     "install_info": {
       "files": [
         "src/parser.c",
@@ -617,6 +626,7 @@
     ]
   },
   "embedded_template": {
+    "legacy": true,
     "filetype": "eruby",
     "install_info": {
       "files": [
@@ -626,6 +636,7 @@
     }
   },
   "erlang": {
+    "legacy": true,
     "install_info": {
       "files": [
         "src/parser.c"
@@ -731,6 +742,7 @@
     ]
   },
   "fortran": {
+    "legacy": true,
     "install_info": {
       "files": [
         "src/parser.c",
@@ -923,6 +935,7 @@
     ]
   },
   "go": {
+    "legacy": true,
     "install_info": {
       "files": [
         "src/parser.c"
@@ -949,6 +962,7 @@
     "readme_name": "Godot Resources (gdresource)"
   },
   "gomod": {
+    "legacy": true,
     "install_info": {
       "files": [
         "src/parser.c"
@@ -1037,6 +1051,7 @@
     ]
   },
   "hack": {
+    "legacy": true,
     "install_info": {
       "files": [
         "src/parser.c",
@@ -1057,6 +1072,7 @@
     ]
   },
   "haskell": {
+    "legacy": true,
     "install_info": {
       "files": [
         "src/parser.c",
@@ -1178,6 +1194,7 @@
     ]
   },
   "html": {
+    "legacy": true,
     "install_info": {
       "files": [
         "src/parser.c",
@@ -1273,6 +1290,7 @@
     ]
   },
   "java": {
+    "legacy": true,
     "install_info": {
       "files": [
         "src/parser.c"
@@ -1284,6 +1302,7 @@
     ]
   },
   "javascript": {
+    "legacy": true,
     "install_info": {
       "files": [
         "src/parser.c",
@@ -1307,6 +1326,7 @@
     ]
   },
   "jsdoc": {
+    "legacy": true,
     "install_info": {
       "files": [
         "src/parser.c",
@@ -1319,6 +1339,7 @@
     ]
   },
   "json": {
+    "legacy": true,
     "install_info": {
       "files": [
         "src/parser.c"
@@ -1366,6 +1387,7 @@
     ]
   },
   "julia": {
+    "legacy": true,
     "install_info": {
       "files": [
         "src/parser.c",
@@ -1402,6 +1424,7 @@
     ]
   },
   "kotlin": {
+    "legacy": true,
     "install_info": {
       "files": [
         "src/parser.c",
@@ -1521,6 +1544,7 @@
     ]
   },
   "lua": {
+    "legacy": true,
     "install_info": {
       "files": [
         "src/parser.c",
@@ -1580,6 +1604,7 @@
     ]
   },
   "make": {
+    "legacy": true,
     "install_info": {
       "files": [
         "src/parser.c"
@@ -1591,6 +1616,7 @@
     ]
   },
   "markdown": {
+    "legacy": true,
     "experimental": true,
     "install_info": {
       "files": [
@@ -1781,6 +1807,7 @@
     ]
   },
   "objc": {
+    "legacy": true,
     "install_info": {
       "files": [
         "src/parser.c"
@@ -1804,6 +1831,7 @@
     ]
   },
   "ocaml": {
+    "legacy": true,
     "install_info": {
       "files": [
         "src/parser.c",
@@ -1898,6 +1926,7 @@
     ]
   },
   "perl": {
+    "legacy": true,
     "install_info": {
       "branch": "release",
       "files": [
@@ -1912,6 +1941,7 @@
     ]
   },
   "php": {
+    "legacy": true,
     "install_info": {
       "files": [
         "src/parser.c",
@@ -2145,6 +2175,7 @@
     "readme_name": "PyPA manifest"
   },
   "python": {
+    "legacy": true,
     "install_info": {
       "files": [
         "src/parser.c",
@@ -2158,6 +2189,7 @@
     ]
   },
   "ql": {
+    "legacy": true,
     "install_info": {
       "files": [
         "src/parser.c"
@@ -2205,6 +2237,7 @@
     "readme_name": "Tree-Sitter query language"
   },
   "r": {
+    "legacy": true,
     "install_info": {
       "files": [
         "src/parser.c",
@@ -2270,6 +2303,7 @@
     ]
   },
   "regex": {
+    "legacy": true,
     "install_info": {
       "files": [
         "src/parser.c"
@@ -2351,6 +2385,7 @@
     ]
   },
   "rst": {
+    "legacy": true,
     "install_info": {
       "files": [
         "src/parser.c",
@@ -2363,6 +2398,7 @@
     ]
   },
   "ruby": {
+    "legacy": true,
     "install_info": {
       "files": [
         "src/parser.c",
@@ -2375,6 +2411,7 @@
     ]
   },
   "rust": {
+    "legacy": true,
     "install_info": {
       "files": [
         "src/parser.c",
@@ -2387,6 +2424,7 @@
     ]
   },
   "scala": {
+    "legacy": true,
     "install_info": {
       "files": [
         "src/parser.c",
@@ -2553,6 +2591,7 @@
     ]
   },
   "sql": {
+    "legacy": true,
     "install_info": {
       "branch": "gh-pages",
       "files": [
@@ -2758,6 +2797,7 @@
     ]
   },
   "terraform": {
+    "legacy": true,
     "install_info": {
       "files": [
         "src/parser.c",
@@ -2844,6 +2884,7 @@
     ]
   },
   "toml": {
+    "legacy": true,
     "install_info": {
       "files": [
         "src/parser.c",
@@ -2906,6 +2947,7 @@
     ]
   },
   "typescript": {
+    "legacy": true,
     "install_info": {
       "files": [
         "src/parser.c",
@@ -3171,6 +3213,7 @@
     ]
   },
   "yaml": {
+    "legacy": true,
     "install_info": {
       "files": [
         "src/parser.c",

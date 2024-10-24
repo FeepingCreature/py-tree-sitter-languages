@@ -6,7 +6,6 @@ LANGUAGES = [
     'c_sharp',  # c-sharp
     'commonlisp',
     'cpp',
-    'css',
     'dockerfile',
     'dot',
     'elixir',
@@ -18,7 +17,6 @@ LANGUAGES = [
     'gomod',  # go-mod
     'hack',
     'haskell',
-    'hcl',
     'html',
     'java',
     'javascript',

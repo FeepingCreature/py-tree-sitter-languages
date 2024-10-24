@@ -59,6 +59,7 @@ jobs:
         run: python -m cibuildwheel --output-dir dist
         env:
           CIBW_BEFORE_BUILD: pip install cython==3.0.8 && pip install . && python build.py
+          CIBW_BEFORE_BUILD_WINDOWS: pip install cython==3.0.8 && pip install . && python build.py --legacy
           CIBW_TEST_REQUIRES: pytest
           CIBW_TEST_COMMAND: pytest --showlocals {package}/tests
           CIBW_SKIP: "{cp36**,pp*}"
