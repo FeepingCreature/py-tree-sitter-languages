@@ -19,7 +19,7 @@ Install
 
 ::
 
-   pip install tree_sitter_languages
+   pip install tree_sitter_languages_freed_wu_pr
 
 Source installs are not supported. To see how the binary wheels are built, look
 at:
@@ -41,7 +41,7 @@ Usage
 
 .. code:: python
 
-   from tree_sitter_languages import get_language, get_parser
+   from tree_sitter_languages_freed_wu_pr import get_language, get_parser
 
    language = get_language('python')
    parser = get_parser('python')
@@ -134,7 +134,7 @@ Enter `tree-sitter`_
 
 .. code:: python
 
-   from tree_sitter_languages import get_language, get_parser
+   from tree_sitter_languages_freed_wu_pr import get_language, get_parser
 
    language = get_language('python')
    parser = get_parser('python')

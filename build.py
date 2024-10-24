@@ -59,9 +59,9 @@ else:
 print()
 
 if sys.platform == "win32":
-    languages_filename = "tree_sitter_languages\\languages.dll"
+    languages_filename = "tree_sitter_languages_freed_wu_pr\\languages.dll"
 else:
-    languages_filename = "tree_sitter_languages/languages.so"
+    languages_filename = "tree_sitter_languages_freed_wu_pr/languages.so"
 
 print(f"{sys.argv[0]}: Building", languages_filename)
 Language.build_library(
