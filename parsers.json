@@ -1028,17 +1028,6 @@
       "@bkegley"
     ]
   },
-  "groovy": {
-    "install_info": {
-      "files": [
-        "src/parser.c"
-      ],
-      "url": "https://github.com/murtaza64/tree-sitter-groovy"
-    },
-    "maintainers": [
-      "@murtaza64"
-    ]
-  },
   "gstlaunch": {
     "install_info": {
       "files": [
