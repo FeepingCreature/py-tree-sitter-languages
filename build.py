@@ -1,5 +1,6 @@
 import json
 import os
+import platform
 import subprocess
 import sys
 from argparse import ArgumentParser
@@ -14,6 +15,11 @@ parser = ArgumentParser()
 parser.add_argument("--prebuild", action="store_true", help="Only clone repos and generate grammar")
 parser.add_argument("--legacy", action="store_true", help="Only build legacy languages that were in 1.10.2.")
 args = parser.parse_args()
+
+# Force legacy build on aarch64 to avoid timeouts
+if platform.machine() == 'aarch64':
+    print("Force --legacy because the qemu runner is too slow for the full build")
+    args.legacy = True
 
 repos = []
 vendors = []
