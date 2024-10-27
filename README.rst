@@ -2,6 +2,26 @@
 Python Bindings for Tree Sitter with All Languages
 ==================================================
 
+This is a fork!
+===============
+
+It is based on `@Freed_Wu's pull request`_ which adds support for many additional
+tree-sitter language parsers beyond the original.
+
+As the package seems unmaintained, I decided to fork it based on the PR. Note that
+this version may not see additional support and you should switch back to the
+original once it gets going again.
+
+The package has been renamed to avoid collision with the original.
+
+The Windows and ARM Arch64 packages still only get the original languages, for
+Windows because the extended commandline busted the `link.exe` command line length
+limit, and for ARM Arch64 because the Github action uses QEMU to build on ARM,
+which is slow, so the additional languages cause the Github runner to time out.
+
+Original README
+===============
+
 Binary Python wheels for all tree sitter languages.
 
 `py-tree-sitter`_ is a fantastic library that provides Python bindings for the
@@ -11,7 +31,10 @@ even more fantastic `tree-sitter`_ parsing library.
 languages. The binary wheels remove the need to download and compile support
 for individual languages.
 
+This package is based on
+
 .. _`py-tree-sitter-languages`: https://github.com/grantjenks/py-tree-sitter-languages
+.. _`@Freed_Wu's pull request`: https://github.com/grantjenks/py-tree-sitter-languages/pull/53
 
 
 Install
